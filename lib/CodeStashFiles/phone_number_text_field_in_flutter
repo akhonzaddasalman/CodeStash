@@ -1,0 +1,34 @@
+# if you need phone number text field then you can use the below code and follow the instruction below
+1) add the dependecy: intl_phone_field: (updated version) in the pubspec.yamal file 
+2) import the library in the file where you want to use the IntlPhoneField "package:intl_phone_field/intl_phone_field.dart"
+3) use the below code accroding to your need
+
+
+IntlPhoneField(
+                disableLengthCheck: true,
+                decoration: InputDecoration(
+                  contentPadding: const EdgeInsets.all(20),
+                  hintText: "Phone Number",
+                  hintStyle: TextStyle(
+                    color: textHintColor,
+                    fontSize: 16,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: textFieldBorder, width: 1),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: themeBackground, width: 1),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  errorBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Colors.red, width: 1),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+                initialCountryCode: 'GB',
+                onChanged: (phone) {
+                  // number = phone;
+                },
+              ),
+             
